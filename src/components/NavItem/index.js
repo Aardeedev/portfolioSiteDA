@@ -2,11 +2,15 @@ import React from "react"
 
 import css from "./NavItem.module.css"
 
-const NavItem = ({ section }) => {
+const NavItem = ({ section, width, setActiveSection }) => {
   return (
-    <a className={css.navItem} href={`#${section.replace(" ", "")}`}>
+    <div
+      className={css.navItem}
+      style={{ width: `${width}%` }}
+      onClick={() => setActiveSection(section)}
+    >
       <h3>{section.toUpperCase()}</h3>
-    </a>
+    </div>
   )
 }
 

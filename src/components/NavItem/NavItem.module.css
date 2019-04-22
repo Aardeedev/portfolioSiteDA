@@ -7,7 +7,7 @@
   align-items: center;
   transition: background-color 0.3s;
   text-decoration: none;
-  /* border-radius: 1vw; */
+  cursor: pointer;
 }
 
 .navItem h3 {

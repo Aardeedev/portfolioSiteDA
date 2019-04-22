@@ -1,38 +1,13 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 
 import css from "./Intro.module.css"
 
 import Logo from "../Logo"
 import NavBar from "../NavBar"
 
-const Intro = ({ sections }) => {
-  const [topBarSticky, setTopBarSticky] = useState(false)
-
-  const checkScroll = () => {
-    const yscroll = window.scrollY
-    const introheight = window.outerWidth * 0.15 //intro 12vw + top margin of 3vw
-
-    console.log("yscroll", yscroll)
-    console.log("introheight", introheight)
-
-    if (yscroll > introheight) {
-      setTopBarSticky(true)
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      console.log("scrollfired")
-      checkScroll()
-    })
-  }, [])
-
+const Intro = props => {
   return (
-    <div
-      className={[css.introContainer, topBarSticky ? css.invisible : ""].join(
-        " "
-      )}
-    >
+    <div className={[css.introContainer].join(" ")}>
       <div className={css.nameAndStatement}>
         <div className={css.logo}>
           <Logo />
@@ -45,7 +20,7 @@ const Intro = ({ sections }) => {
       <div className={css.separator} />
       <div className={css.nameAndNav}>
         <h2>DAVID ADAMS</h2>
-        <NavBar sections={sections} />
+        <NavBar {...props} />
       </div>
     </div>
   )

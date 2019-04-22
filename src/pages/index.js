@@ -4,16 +4,17 @@ import { Link } from "gatsby"
 import SEO from "../components/seo"
 import MasterLayout from "../components/MasterLayout"
 import Intro from "../components/Intro"
-import AboutMe from "../components/AboutMe"
-import Portfolio from "../components/Portfolio"
+import ContentContainer from "../components/ContentContainer"
 
-const DAHomepage = () => {
+const Index = () => {
   const [sections, setSections] = useState([
     "About Me",
     "Portfolio",
-    "Music",
     "Other Skills",
+    "More Info",
   ])
+
+  const [activeSection, setActiveSection] = useState("About Me")
 
   return (
     <>
@@ -22,12 +23,11 @@ const DAHomepage = () => {
         keywords={[`David`, `Adams`, `Dave`, `Junior`, `Developer`, `React`]}
       />
       <MasterLayout>
-        <Intro sections={sections} />
-        <AboutMe />
-        <Portfolio />
+        <Intro sections={sections} setActiveSection={setActiveSection} />
+        <ContentContainer activeSection={activeSection} />
       </MasterLayout>
     </>
   )
 }
 
-export default DAHomepage
+export default Index
