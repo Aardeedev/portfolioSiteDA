@@ -1,0 +1,71 @@
+.introContainer {
+  margin-top: 3vw;
+  margin-bottom: 2vw;
+  height: 12vw;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.nameAndStatement {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.introContainer h2 {
+  margin-block-start: 0;
+  font-size: 2.4vw;
+  margin-block-end: 0;
+  color: var(--highlightPurple);
+}
+
+.logo {
+  height: 100%;
+  max-width: 26%;
+  min-width: 26%;
+  transform: skewX(-10deg) translateX(1vw);
+}
+
+.personalStatement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+.personalStatement h3 {
+  font-size: 2.6vw;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.personalStatement p {
+  font-size: 1.5vw;
+  margin-block-start: 1vw;
+  margin-block-end: 0;
+}
+
+.separator {
+  margin-top: 0.5vw;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    rgba(162, 57, 202, 1) 45%,
+    rgba(231, 223, 221, 1) 46%,
+    rgba(231, 223, 221, 1) 47%,
+    rgba(14, 11, 22, 1) 48%
+  );
+  background-size: 200% 100%;
+  animation: swipeRight 1s ease-in-out both;
+}
+
+@keyframes swipeRight {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
