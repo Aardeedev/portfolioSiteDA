@@ -1,0 +1,6 @@
+.aboutMeContainer {
+  height: 50vh;
+  width: 100%;
+  background-color: var(--highlightBlue);
+  padding-bottom: 3vw;
+}

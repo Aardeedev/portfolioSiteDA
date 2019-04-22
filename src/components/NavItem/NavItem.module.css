@@ -1,0 +1,22 @@
+.navItem {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 0 0.5vw 0 0.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  /* border-radius: 1vw; */
+}
+
+.navItem h3 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: 1.2vw;
+  text-align: center;
+}
+
+.navItem:hover {
+  background-color: var(--highlightPurple);
+}
