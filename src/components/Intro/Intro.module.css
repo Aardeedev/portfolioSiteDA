@@ -1,10 +1,16 @@
 .introContainer {
-  margin-top: 3vw;
+  margin-top: 1vw;
   margin-bottom: 2vw;
   height: 12vw;
   width: 60vw;
   display: flex;
   flex-direction: column;
+}
+
+.invisible {
+  position: sticky;
+  top: 0;
+  margin-top: 0vw;
 }
 
 .nameAndStatement {
@@ -13,11 +19,11 @@
   width: 100%;
 }
 
-.introContainer h2 {
-  margin-block-start: 0;
-  font-size: 2.4vw;
-  margin-block-end: 0;
-  color: var(--highlightPurple);
+.nameAndNav {
+  height: 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -35,7 +41,7 @@
 }
 
 .personalStatement h3 {
-  font-size: 2.6vw;
+  font-size: 2.9vw;
   margin-block-start: 0;
   margin-block-end: 0;
 }
@@ -52,13 +58,20 @@
   height: 3px;
   background: linear-gradient(
     to right,
-    rgba(162, 57, 202, 1) 45%,
-    rgba(231, 223, 221, 1) 46%,
-    rgba(231, 223, 221, 1) 47%,
-    rgba(14, 11, 22, 1) 48%
+    var(--highlightPurple) 45%,
+    var(--textMain) 46%,
+    var(--textMain) 47%,
+    transparent 48%
   );
-  background-size: 200% 100%;
-  animation: swipeRight 1s ease-in-out both;
+  background-size: 250% 100%;
+  animation: swipeRight 0.7s ease-in-out both;
+}
+
+.nameAndNav h2 {
+  margin-block-start: 0;
+  font-size: 2.3vw;
+  margin-block-end: 0;
+  color: var(--highlightPurple);
 }
 
 @keyframes swipeRight {
@@ -66,6 +79,6 @@
     background-position: 100%;
   }
   100% {
-    background-position: 0%;
+    background-position: 15%;
   }
 }

@@ -4,6 +4,7 @@
   --mainBGColor: #0e0b16;
   --textMain: #e7dfdd;
   --highlightPurple: #a239ca;
+  --highlightPurpleTrans: rgb(162, 57, 202, 0.1);
   --highlightBlue: #4717f6;
 }
 
@@ -16,6 +17,7 @@ body {
   font-family: "Quattrocento Sans", sans-serif;
   max-width: 100vw;
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 h1,
