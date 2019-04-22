@@ -4,11 +4,18 @@ import NavItem from "../NavItem"
 
 import css from "./NavBar.module.css"
 
-const NavBar = ({ sections }) => {
+const NavBar = ({ sections, setActiveSection }) => {
+  const width = 100 / sections.length
+
   return (
     <div className={css.navContainer}>
       {sections.map((section, idx) => (
-        <NavItem key={`${section}${idx}`} section={section} />
+        <NavItem
+          key={`${section}${idx}`}
+          section={section}
+          setActiveSection={setActiveSection}
+          width={width}
+        />
       ))}
     </div>
   )
