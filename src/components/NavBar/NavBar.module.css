@@ -4,3 +4,9 @@
   display: flex;
   justify-content: center;
 }
+
+@media only screen and (max-device-width: 768px) {
+  .navContainer {
+    position: sticky;
+  }
+}
