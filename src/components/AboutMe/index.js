@@ -10,6 +10,9 @@ const AboutMe = ({ active }) => {
     >
       <h2> About Me</h2>
       <p>
+        OMAR!... <br />
+        I can do the HTML, CSS, and JavaScript and know node.JS and React and I can also do the MongoDB
+        <bt />
         I'm pretty flippin awesome. I mean I can literally do anything. HIRE ME
         AND GIVE ME LOTS OF MONEYS!
         <br />
